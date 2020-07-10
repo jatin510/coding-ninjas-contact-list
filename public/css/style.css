@@ -1,0 +1,23 @@
+* {
+  padding: 0px;
+  margin: 0px;
+}
+
+.contacts {
+  width: 50%;
+  margin: auto;
+}
+
+li {
+  display: inline;
+}
+
+.contact-detail {
+  width: 70%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.delete-button {
+  width: 20%;
+}

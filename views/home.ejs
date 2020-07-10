@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title><%= title %></title>
+    <link rel="stylesheet" href="/css/style.css" />
+  </head>
+  <body>
+    <div class="contacts">
+      <h1><center>Contact List</center></h1>
+
+      <ul>
+        <% for( let i of contact_list) { %>
+        <li>
+          <div class="contact-detail">
+            <p><%= i.name%></p>
+            &nbsp;
+            <p><%= i.phone%></p>
+          </div>
+          <div class="delete-button">
+            <a href="/delete-contact/<%=i._id%>"> del</a>
+          </div>
+        </li>
+        <% } %>
+      </ul>
+
+      <form action="/create-contact" method="POST">
+        <input type="text" name="name" placeholder="Enter your name" required />
+        <input
+          type="number"
+          name="phone"
+          placeholder="Enter your phone"
+          required
+        />
+        <button type="submit">Add Contact</button>
+      </form>
+    </div>
+  </body>
+</html>
